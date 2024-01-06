@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/7f6d85f802.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+        
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-solid fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Student at RV University</p>
+            <h1>Hi,<br> I'm Prerana M Shirur</h1>
+        </div>
+    </div>
+
+</div>
+<div id="both">
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about col-1">
+            </div>
+            <div class="about col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello, I am Prerana M. Shirur, a Computer Science and Engineering Honors student at RV University, Bangalore.
+                    My academic focus revolves around cultivating web development skills and mastering languages like C, C++, and Python.
+                     As I progress through my B.Tech journey, I am enthusiastic about exploring additional programming languages.
+                     Beyond academics, I actively engage in badminton and find joy in traveling to broaden my horizons. 
+                     A perpetual learner, I am committed to acquiring knowledge that contributes to both personal and professional development.
+                    This brief encapsulates my passion for technology and my commitment to continuous growth, making it a valuable addition to my portfolio.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="services">
+    <div class="container">
+       <h1 class="sub-title"></h1>
+       <div class="services-list">
+          <div>
+            <h2>SKILLS</h2>
+            <ul>
+                <li>Web Development</li>
+                <li>C Programming</li>
+                <li>C++ Programming</li>
+                <li>Data analysis</li>
+            </ul>
+          </div> 
+          <div>
+            <h2>EXPERIENCE</h2>
+            <ul>
+                <li>MiniProject in IWD course</li>
+                <li>Final Project on Data Analysis</li>
+            </ul>
+          </div> 
+          <div>
+            <h2>EDUCATION</h2>
+            <p>BNM School(97.79%)--2021</p>
+            <p>RVPU College(95.67%)--2023</p>
+            <p>RV University-----Ongoing</p>
+          </div> 
+       </div>
+    </div>
+</div>
+</div>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Work1.jpg">
+                <div class="layer">
+                    <h3>DSCA Project</h3>
+                    <p>Our DSCA group project features an interactive game where touching a copper wire sends a signal, seamlessly merging hardware and programming for an engaging user experience. This achievement underscores our collaborative prowess in integrating electrical components and coding skills.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Work2.jpg">
+                <div class="layer">
+                    <h3>IWD MiniProject</h3>
+                    <p>In our IWD mini project, we crafted an interactive live solar system, offering planet information and a quiz for an engaging learning experience, showcasing our blend of creativity and technical skills.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work3.jpg">
+                <div class="layer">
+                    <h3>Game Building</h3>
+                    <p>As part of our structured innovation course, our team collaboratively built a game from scratch, highlighting our collective skills in game development and innovative problem-solving.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hover"><p>Hover over the templates</p></div>
+</div>
+
+
+
+<div id="contact">
+<div class="container">
+    <div class="row">
+        <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane-top"></i>preranams.btech23@rvu.edu.in</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="contact-right">
+            <form id="contactForm">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                 <button type="submit" class="button">Submit</button>
+            </form>
+            <span id="msg"></span>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <p>Copyright @2024 Prerana M Shirur. All rights reserved</p>
+</div>
+</div>
+
+
+<script>
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right= "0";
+    }
+    function closemenu(){
+        sidemeu.style.right="-200px";
+    }
+</script>
+
+<script>
+    const contactForm = document.getElementById('contactForm');
+    const msg = document.getElementById('msg');
+
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        
+
+        msg.innerHTML = "Submitted";
+        msg.style.color = "green";
+
+        setTimeout(function () {
+            contactForm.reset();
+            msg.innerHTML = "";
+            msg.style.color = "";
+        }, 2000);
+    });
+</script>
+
+
+
+
+</body>
+</html>
